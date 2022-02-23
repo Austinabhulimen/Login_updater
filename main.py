@@ -28,14 +28,13 @@ def timed_login():
         response = list(input("Please enter password: "))
         executionTime = (time.time() - startTime)
         print(executionTime)
-        set_time = 20
 
-        if executionTime > set_time:
-            print(f"Password expired!........{executionTime} exceeds {set_time}")
+        if executionTime > 20:
+            print(f"Password expired!........{executionTime}")
             time.sleep(5)
             logic()
         elif response == list1:
-            print(f"Welcome {exe3cutionTime} is less than {set_time}")
+            print("Welcome")
 
         else: print("Try again, wrong password")
 
