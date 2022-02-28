@@ -1,3 +1,5 @@
+import os
+
 import Password_generator
 import time
 from twilio.rest import Client
@@ -5,9 +7,8 @@ def logic():
     list1 = Password_generator.password()
 
     # Your Account Sid and Auth Token from twilio.com / console
-    account_sid = 'ACf0169bad626e36d7404199ae55ecd308'
-    auth_token = '8d6f6248c77938b1e70b7fa098ed9a03'
-
+    account_sid = os.environ['TWILIO_ACCOUNT_SID']
+    auth_token = os.environ['TWILIO_AUTH_TOKEN']
     client = Client(account_sid, auth_token)
 
     ''' Change the value of 'from' with the number 
