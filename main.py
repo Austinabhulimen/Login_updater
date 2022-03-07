@@ -4,7 +4,7 @@ import Password_generator
 import time
 from twilio.rest import Client
 def logic():
-    list1 = Password_generator.password()
+    generated_pass = Password_generator.password_gen.password()
 
     # Your Account Sid and Auth Token from twilio.com / console
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
@@ -15,7 +15,7 @@ def logic():
     received from Twilio and the value of 'to'
     with the number in which you want to send message.'''
 
-    stringed = "".join(list1)
+    stringed = "".join(generated_pass)
 
     messages = stringed
 
